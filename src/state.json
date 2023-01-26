@@ -1,0 +1,9 @@
+{
+  "customers": [
+    {
+      "firstName": "first",
+      "lastName": "last",
+      "email": "test@gmail.com"
+    }
+  ]
+}
