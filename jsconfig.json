@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-			"app": ["./src/app/*"]
+			// "app": ["./src/app/*"],
+      "store": ["./src/app/store/*"],
+      "data": ["./src/app/data/*"]
     }
   },
   "exclude": [

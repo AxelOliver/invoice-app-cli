@@ -5,21 +5,17 @@
  *
  * Copyright (c) 2022 Jibility
  */
-import { isEqual } from 'lodash'
-import { selectCustomers } from './selectors'
+import invoiceAppStore from 'store/invoiceAppStore'
+import actions from 'data'
 
-export const createCustomer = (customer) => {
-  const customers = selectCustomers()
-  customers.push(customer)
+export const addCustomer = (customer) => {
+  invoiceAppStore.getState().addCustomer(customer)
+  const newState = invoiceAppStore.getState()
+  actions.overWriteData(newState)
 }
 
 export const deleteCustomer = (customer) => {
-  console.log({ customer })
-  const customers = selectCustomers()
-  const index = customers.findIndex((existingCustomer) =>
-    isEqual(existingCustomer, customer),
-  )
-  if (index !== -1) {
-    customers.splice(index, 1)
-  }
+  invoiceAppStore.getState().deleteCustomer(customer)
+  const newState = invoiceAppStore.getState()
+  actions.overWriteData(newState)
 }

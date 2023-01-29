@@ -10,5 +10,15 @@
         "corejs": "3.6.5"
       }
     ]
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "app": "./src/app",
+        "store": "./src/app/store",
+        "data": "./src/app/data/actions.js"
+      }
+    }]
   ]
 }

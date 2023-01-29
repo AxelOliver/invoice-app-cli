@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2022 Jibility
  */
-import customerMenu from './customers-cli/customer-menu'
+import CustomerMenu from './customers-cli/customer-menu'
 import { prompt } from 'enquirer'
 import { isEqual } from 'lodash'
 
@@ -22,7 +22,7 @@ const cliIndex = async () => {
     })
     switch (response.option) {
       case 'Customers':
-        await customerMenu()
+        await CustomerMenu()
         break
 
       default:

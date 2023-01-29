@@ -10,7 +10,7 @@ import { selectCustomers } from '../customers-domain/selectors'
 import createCustomerMenu from './create-customer'
 import deleteCustomerMenu from './delete-customer'
 
-const customerMenu = async () => {
+const CustomerMenu = async () => {
   const response = await prompt({
     type: 'select',
     name: 'customerOption',
@@ -35,4 +35,4 @@ const customerMenu = async () => {
   }
 }
 
-export default customerMenu
+export default CustomerMenu

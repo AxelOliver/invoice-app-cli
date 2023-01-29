@@ -6,7 +6,7 @@
  * Copyright (c) 2022 Jibility
  */
 import { selectCustomers } from '../customers-domain/selectors'
-import { createCustomer } from '../customers-domain/actions'
+import { addCustomer } from '../customers-domain/actions'
 import { prompt } from 'enquirer'
 
 const createCustomerMenu = async () => {
@@ -22,7 +22,7 @@ const createCustomerMenu = async () => {
       ],
     },
   ])
-  createCustomer(customer.customer)
+  addCustomer(customer.customer)
   console.log(selectCustomers())
 }
 

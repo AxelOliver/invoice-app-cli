@@ -5,6 +5,6 @@
  *
  * Copyright (c) 2022 Jibility
  */
-import invoiceAppState from '../invoice-app-state'
+import invoiceAppStore from 'store/invoiceAppStore'
 
-export const selectCustomers = () => invoiceAppState.customers
+export const selectCustomers = () => invoiceAppStore.getState().customers
